@@ -12,6 +12,33 @@ body {
 
 }
 
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 100px);
+  width: 100%;
+}
+
+article {
+  background: radial-gradient(circle at top, hsl(215, 27%, 17%) 0%,
+      hsl(215, 27%, 12%) 100%);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  width: 90%;
+  max-width: 340px;
+}
+
+article figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  height: 2rem;
+  background-color: hsl(210, 19%, 18%);
+  aspect-ratio: 1/1;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
