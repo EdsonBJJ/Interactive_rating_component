@@ -37,9 +37,28 @@ article figure {
   height: 2rem;
   background-color: hsl(210, 19%, 18%);
   aspect-ratio: 1/1;
+  border-radius: 50%;
 }
 
-.attribution {
+article figure img {
+  height: 0.8rem;
+}
+
+article h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+  margin-bottom: 0.5rem;
+}
+
+article p {
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  color: hsl(216, 12%, 54%);
+}
+
+article .attribution {
   font-size: 11px;
   text-align: center;
   font-family: 'Overpass', sans-serif;
