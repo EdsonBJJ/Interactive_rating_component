@@ -58,6 +58,45 @@ article p {
   color: hsl(216, 12%, 54%);
 }
 
+article form {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+article from .rating span {
+  font-size: 0.8rem;
+  font-weight: 400;
+  position: absolute;
+  z-index: 1;
+  color: hsl(217, 12%, 63%);
+  pointer-events: nome;
+}
+
+article from .rating input[type="radio"]:checked {
+  background-color: hsl(217, 12%, 63%);
+}
+
+article form .rating input[type="radio"]:checked~span {
+  color: #fff;
+}
+
+article form .rating input[type="radio"]:hover {
+  background-color: hsl(25, 97%, 53%);
+}
+
+article from .rating input[type="radio"]:hover~span {
+  color: #fff;
+}
+
+article from button[type="submit"] {
+  height: 2.5rem;
+  width: 100%;
+  padding: 0.5 1rem;
+
+}
+
 article .attribution {
   font-size: 11px;
   text-align: center;
