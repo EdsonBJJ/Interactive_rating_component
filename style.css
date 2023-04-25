@@ -94,16 +94,73 @@ article from button[type="submit"] {
   height: 2.5rem;
   width: 100%;
   padding: 0.5 1rem;
-
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: hsl(25, 97%, 53%);
+  border: none;
+  cursor: pointer;
 }
 
+article form button[type="sbmit"]:hover {
+  background-color: #fff;
+  color: hsl(25, 97%, 53%);
+}
+
+#principal {
+  height: 22rem;
+}
+
+#agradecimento-art {
+  height: 22rem;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#agradecimento-art div {
+  background-color: hsl(213, 19%, 18%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2rem;
+  border-radius: 1rem;
+  margin: 1.5rem 0;
+}
+
+#agradecimento-art div p {
+  color: hsla(25, 97%, 53%, 0.5);
+  margin-bottom: 0;
+  padding: 0 1rem;
+}
+
+#agradecimento-art p {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+
+
 article .attribution {
-  font-size: 11px;
+  font-size: 15px;
   text-align: center;
   font-family: 'Overpass', sans-serif;
-  font-size: 15px;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.attribution a {
+  text-decoration: underline;
 }
