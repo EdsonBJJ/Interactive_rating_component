@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
-
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +7,8 @@
 
 body {
   background-color: hsl(216, 12%, 8%);
-
+  font-family: 'Overpass', sans-serif;
+  font-size: 15px;
 }
 
 main {
@@ -21,7 +20,8 @@ main {
 }
 
 article {
-  background: radial-gradient(circle at top, hsl(215, 27%, 17%) 0%,
+  background: radial-gradient(circle at top,
+      hsl(215, 27%, 17%) 0%,
       hsl(215, 27%, 12%) 100%);
   border-radius: 1rem;
   padding: 1.5rem;
@@ -45,36 +45,64 @@ article figure img {
 }
 
 article h2 {
+  color: hsl(0, 0%, 100%);
   font-size: 1.5rem;
   font-weight: 700;
-  color: hsl(0, 0%, 100%);
   margin-bottom: 0.5rem;
 }
 
 article p {
+  color: hsl(216, 12%, 54%);
   font-size: 0.9rem;
   font-weight: 400;
   margin-bottom: 2rem;
-  color: hsl(216, 12%, 54%);
 }
 
 article form {
-  margin-bottom: 1rem;
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin-bottom: 1rem;
 }
 
-article from .rating span {
+article form .rating {
+  display: grid;
+  width: 100%;
+  height: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(5, 1fr);
+  margin-bottom: 2rem;
+}
+
+article form .rating label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+article form .rating input[type="radio"] {
+  border: none;
+  appearance: none;
+  background-color: hsl(213, 19%, 18%);
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  position: absolute;
+  cursor: pointer;
+}
+
+article form .rating span {
+  color: hsl(217, 12%, 63%);
   font-size: 0.8rem;
   font-weight: 400;
   position: absolute;
   z-index: 1;
-  color: hsl(217, 12%, 63%);
-  pointer-events: nome;
+  pointer-events: none
 }
 
-article from .rating input[type="radio"]:checked {
+article form .rating input[type="radio"]:checked {
   background-color: hsl(217, 12%, 63%);
 }
 
@@ -86,25 +114,27 @@ article form .rating input[type="radio"]:hover {
   background-color: hsl(25, 97%, 53%);
 }
 
-article from .rating input[type="radio"]:hover~span {
+article form .rating input[type="radio"]:hover~span {
   color: #fff;
 }
 
-article from button[type="submit"] {
-  height: 2.5rem;
-  width: 100%;
-  padding: 0.5 1rem;
+article form button[type="submit"] {
+  border: none;
+  appearance: none;
+  background-color: hsl(25, 97%, 53%);
+  color: #fff;
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 5px;
   text-transform: uppercase;
-  color: #fff;
-  background-color: hsl(25, 97%, 53%);
-  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: calc(2.5rem / 2);
   cursor: pointer;
+  width: 100%;
+  height: 2.5rem;
 }
 
-article form button[type="sbmit"]:hover {
+article form button[type="submit"]:hover {
   background-color: #fff;
   color: hsl(25, 97%, 53%);
 }
@@ -113,15 +143,16 @@ article form button[type="sbmit"]:hover {
   height: 22rem;
 }
 
-#agradecimento-art {
+#agradecimento {
   height: 22rem;
   display: none;
-  justify-content: center;
+
   align-items: center;
+  justify-content: center;
   flex-direction: column;
 }
 
-#agradecimento-art div {
+#agradecimento div {
   background-color: hsl(213, 19%, 18%);
   display: flex;
   align-items: center;
@@ -131,36 +162,38 @@ article form button[type="sbmit"]:hover {
   margin: 1.5rem 0;
 }
 
-#agradecimento-art div p {
+#agradecimento div p {
   color: hsla(25, 97%, 53%, 0.5);
   margin-bottom: 0;
   padding: 0 1rem;
 }
 
-#agradecimento-art p {
+#agradecimento p {
   text-align: center;
   margin-bottom: 0;
 }
 
-
-
-article .attribution {
-  font-size: 15px;
+.attribution {
+  font-size: 20px;
   text-align: center;
-  font-family: 'Overpass', sans-serif;
-  font-weight: 400;
+  background: radial-gradient(circle at top,
+      hsl(215, 27%, 14%) 0%,
+      hsl(215, 27%, 12%) 40%);
+  color: hsl(216, 12%, 54%);
+  height: 100px;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
+  font-weight: 700;
 }
 
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: hsl(25, 97%, 53%);
   font-weight: 400;
   text-decoration: none;
 }
 
-.attribution a {
+.attribution a:hover {
   text-decoration: underline;
 }
